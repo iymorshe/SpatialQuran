@@ -26,6 +26,28 @@ let surahNames = [
     "Al-'Asr", "Al-Humaza", "Al-Fil", "Quraish", "Al-Ma'un", "Al-Kawthar", "Al-Kafirun",
     "An-Nasr", "Al-Masad", "Al-Ikhlas", "Al-Falaq", "An-Nas"
 ]
+let englishSurahNames = [
+    "", "The Opening", "The Cow", "The Family of Imran", "Women", "The Table Spread", "The Cattle",
+    "The Elevated Places", "The Spoils of War", "The Repentance", "Jonah", "Hud", "Joseph", "The Thunder", "Abraham",
+    "The Rock", "The Bee", "The Night Journey", "The Cave", "Mary", "Ta-Ha", "The Prophets", "The Pilgrimage",
+    "The Believers", "The Light", "The Criterion", "The Poets", "The Ant", "The Story", "The Spider",
+    "The Romans", "Luqman", "The Prostration", "The Combined Forces", "Sheba", "The Originator", "Ya-Sin", "Those who set the Ranks",
+    "The Letter Saad", "The Troops", "The Forgiver", "Explained in Detail", "Consultation", "Ornaments of Gold", "The Smoke",
+    "The Crouching", "The Wind-Curved Sandhills", "Muhammad", "The Victory", "The Rooms", "The Letter Qaf", "The Winnowing Winds",
+    "The Mount", "The Star", "The Moon", "The Beneficent", "The Inevitable", "The Iron", "The Pleading Woman",
+    "The Exile", "She that is to be examined", "The Ranks", "The Congregation", "The Hypocrites", "The Mutual Disillusion", "The Divorce",
+    "The Prohibition", "The Sovereignty", "The Pen", "The Reality", "The Ascending Stairways", "Noah", "The Jinn", "The Wrapped Up",
+    "The Cloaked One", "The Resurrection",
+    // Adding new entries
+    "Those Sent Forth", "The Great News", "Those Who Tear Out", "He Frowned", "The Folding Up", "The Cleaving Asunder",
+    "The Dealers in Fraud", "The Rending Asunder", "The Mansions Of The Stars", "The Night-Visitant", "The Most High",
+    "The Overwhelming Event", "The Break of Day", "The City", "The Sun", "The Night", "The Glorious Morning Light",
+    "The Expansion of Breast", "The Fig Tree", "The Clinging Clot", "The Night of Honor", "The Clear Evidence",
+    "The Earthquake", "The Courser", "The Striking Hour", "The Piling Up", "The Time", "The Scandalmonger",
+    "The Elephant", "The Quraysh", "The Neighbourly Assistance", "Abundance", "The Disbelievers", "The Help",
+    "The Plaited Rope", "Purity of Faith", "The Daybreak", "Mankind"
+]
+
 typealias QuranVerseCompletion = ([String]?) -> Void
 struct QuranResponse: Codable {
     let translation_eng: String
@@ -115,13 +137,6 @@ func fetchQuranVerse(start: Int, end: Int, completion: @escaping QuranVerseCompl
     }
 }
 */
-enum QuranError: Error {
-    case invalidRange
-    case networkError(Error)
-    case invalidResponse
-    case parsingError(Error)
-}
-
 func nextQuranVerse(surahNumber: Int, verseNumber: Int, completion: @escaping QuranVerseCompletion) {
     let headers = [
         "X-RapidAPI-Key": "05826406d6msh37c7156f2232f2cp1e109fjsn3e5b2d5afdf1",

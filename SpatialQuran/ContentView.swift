@@ -11,7 +11,8 @@ import RealityKitContent
 
 struct ContentView: View {
     @State var surahName: String = "The Opening"
-    @State var quranText: [String] = []
+    @State var quranText: [Ayah] = []
+    @StateObject var quran: Quran = Quran.shared
     var body: some View {
         VStack {
             HStack {
@@ -32,23 +33,38 @@ struct ContentView: View {
                         .frame(width: 30, height: 30)
                 }
             }
-            ScrollView{
-                ForEach(quranText, id: \.self) { q in
-                    Text(q)
-                        .font(.title)
+            ScrollView {
+                ForEach(quranText, id: \.self) { ayah in
+                    Text("\(ayah.surahNumber).\(ayah.ayahNumber) \(ayah.englishTranslation)")
                         .padding(10)
-                }
-            }
-            
-        }
-        .onAppear{
-            for ayah in 1...versesPerChapter[1] {
-                specificQuranVerse(surahNumber: 1, verseNumber: ayah){
-                    result in
-                    if let result = result {
-                        quranText.append(contentsOf: result)
+                    if ayah.englishTranslation.contains("way") {
+                        Model3D(named: "Scene", bundle: realityKitContentBundle)
+                            .padding(.bottom, 50)
                     }
                 }
+            }
+            .onAppear {
+                Task {
+                    await loadVersesForSurah(surahNumber: 1)
+                }
+            }
+        }
+    }
+    private func loadVersesForSurah(surahNumber: Int) async {
+        guard surahNumber - 1 < versesPerChapter.count else { return }
+        let numberOfVerses = versesPerChapter[surahNumber]
+        var surah = Surah(surahNumber: surahNumber)
+        for verseNumber in 1...numberOfVerses {
+            do {
+                let ayah = try await fetchVerse(surahNumber: surahNumber, verseNumber: verseNumber)
+                DispatchQueue.main.async {
+                    surah.ayahs.append(ayah)
+                    quranText.append(ayah)
+                }
+                
+                
+            } catch {
+                print("Error fetching verse: \(error)")
             }
         }
     }
