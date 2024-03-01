@@ -12,6 +12,8 @@
 		8C54D5822B900A8700961096 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54D5812B900A8700961096 /* ContentView.swift */; };
 		8C54D5842B900A8D00961096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C54D5832B900A8D00961096 /* Assets.xcassets */; };
 		8C54D5872B900A8D00961096 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C54D5862B900A8D00961096 /* Preview Assets.xcassets */; };
+		8C54D5932B90D6C800961096 /* DisplayText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54D5912B90D6C800961096 /* DisplayText.swift */; };
+		8C54D5942B90D6C800961096 /* FetchQuranVerse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54D5922B90D6C800961096 /* FetchQuranVerse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8C54D5832B900A8D00961096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C54D5862B900A8D00961096 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8C54D5882B900A8D00961096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C54D5912B90D6C800961096 /* DisplayText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayText.swift; sourceTree = "<group>"; };
+		8C54D5922B90D6C800961096 /* FetchQuranVerse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchQuranVerse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,8 @@
 		8C54D56F2B900A8700961096 = {
 			isa = PBXGroup;
 			children = (
+				8C54D5912B90D6C800961096 /* DisplayText.swift */,
+				8C54D5922B90D6C800961096 /* FetchQuranVerse.swift */,
 				8C54D57A2B900A8700961096 /* SpatialQuran */,
 				8C54D57B2B900A8700961096 /* Packages */,
 				8C54D5792B900A8700961096 /* Products */,
@@ -156,6 +162,8 @@
 			files = (
 				8C54D5822B900A8700961096 /* ContentView.swift in Sources */,
 				8C54D5802B900A8700961096 /* SpatialQuranApp.swift in Sources */,
+				8C54D5942B90D6C800961096 /* FetchQuranVerse.swift in Sources */,
+				8C54D5932B90D6C800961096 /* DisplayText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
