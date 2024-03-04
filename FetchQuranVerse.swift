@@ -63,8 +63,6 @@ func fetchQuranVerse(start: Int, end: Int, completion: @escaping QuranVerseCompl
     ]
     
     // Ensure the start and end are within valid range
-    let validStart = max(1, start)
-    let validEnd = min(end, 114)
     
     // Select a random chapter within the specified range
     let randomChapter = Int.random(in: start...end)

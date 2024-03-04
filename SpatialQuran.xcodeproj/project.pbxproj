@@ -16,6 +16,7 @@
 		8C54D5942B90D6C800961096 /* FetchQuranVerse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54D5922B90D6C800961096 /* FetchQuranVerse.swift */; };
 		8C660C192B91664400DBBDFF /* Road__Avenue__street.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8C660C182B91664400DBBDFF /* Road__Avenue__street.usdz */; };
 		8C660C1B2B91A02000DBBDFF /* Quran.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C660C1A2B91A02000DBBDFF /* Quran.swift */; };
+		8C6957EC2B9563980034A3A0 /* SurahView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6957EB2B9563980034A3A0 /* SurahView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8C660C182B91664400DBBDFF /* Road__Avenue__street.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Road__Avenue__street.usdz; sourceTree = "<group>"; };
 		8C660C1A2B91A02000DBBDFF /* Quran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quran.swift; sourceTree = "<group>"; };
 		8C660C1C2B91A15C00DBBDFF /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8C6957EB2B9563980034A3A0 /* SurahView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurahView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				8C54D5832B900A8D00961096 /* Assets.xcassets */,
 				8C54D5882B900A8D00961096 /* Info.plist */,
 				8C54D5852B900A8D00961096 /* Preview Content */,
+				8C6957EB2B9563980034A3A0 /* SurahView.swift */,
 			);
 			path = SpatialQuran;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				8C660C1B2B91A02000DBBDFF /* Quran.swift in Sources */,
 				8C54D5802B900A8700961096 /* SpatialQuranApp.swift in Sources */,
 				8C54D5942B90D6C800961096 /* FetchQuranVerse.swift in Sources */,
+				8C6957EC2B9563980034A3A0 /* SurahView.swift in Sources */,
 				8C54D5932B90D6C800961096 /* DisplayText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

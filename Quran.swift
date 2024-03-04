@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SwiftUI
 struct Ayah: Decodable, Hashable {
     let surahNumber: Int
     let ayahNumber: Int
@@ -38,7 +38,7 @@ struct Ayah: Decodable, Hashable {
     }
 }
 
-class Surah{
+class Surah: ObservableObject{
     var surahNumber: Int
     @Published var ayahs: [Ayah] = []
 
@@ -54,10 +54,6 @@ class Surah{
 
 class Quran: ObservableObject {
     static let shared = Quran()
-    var currentSurah: Int = 1
-    func updateSurah(surahNumber: Int) {
-        currentSurah = surahNumber
-    }
     private init() {
         for surahNumber in 0...115 {
             let surah = Surah(surahNumber: surahNumber)
