@@ -157,7 +157,7 @@ func nextQuranVerse(surahNumber: Int, verseNumber: Int, completion: @escaping Qu
     let session = URLSession.shared
     let dataTask = session.dataTask(with: request as URLRequest) { (data, response, error) in
         var resultList: [String] = []
-        
+       //pobobob
         if let error = error {
             print("Error: \(error)")
             completion(nil)

@@ -19,6 +19,14 @@ struct SurahView: View {
                     ForEach(surah.ayahs, id: \.self) { ayah in
                         Text("\(ayah.ayahNumber). \(ayah.englishTranslation)")
                             .font(.system(size:30))
+                        if ayah.englishTranslation.contains("way") {
+                            Button("See Object") {
+//                                Model3D(named: "street")
+//                                    .padding(.bottom,50)
+//                                let anchor = AnchorEntity(.plane(.horizontal, classification: .any, minimumBounds: .one))
+//                                let entity = Model3D(named: "street")
+                            }
+                        }
                         Spacer()
                     }
                 }

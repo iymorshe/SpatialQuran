@@ -14,7 +14,7 @@
 		8C54D5872B900A8D00961096 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C54D5862B900A8D00961096 /* Preview Assets.xcassets */; };
 		8C54D5932B90D6C800961096 /* DisplayText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54D5912B90D6C800961096 /* DisplayText.swift */; };
 		8C54D5942B90D6C800961096 /* FetchQuranVerse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54D5922B90D6C800961096 /* FetchQuranVerse.swift */; };
-		8C660C192B91664400DBBDFF /* Road__Avenue__street.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8C660C182B91664400DBBDFF /* Road__Avenue__street.usdz */; };
+		8C660C192B91664400DBBDFF /* street.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8C660C182B91664400DBBDFF /* street.usdz */; };
 		8C660C1B2B91A02000DBBDFF /* Quran.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C660C1A2B91A02000DBBDFF /* Quran.swift */; };
 		8C6957EC2B9563980034A3A0 /* SurahView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6957EB2B9563980034A3A0 /* SurahView.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,7 @@
 		8C54D5882B900A8D00961096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C54D5912B90D6C800961096 /* DisplayText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayText.swift; sourceTree = "<group>"; };
 		8C54D5922B90D6C800961096 /* FetchQuranVerse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchQuranVerse.swift; sourceTree = "<group>"; };
-		8C660C182B91664400DBBDFF /* Road__Avenue__street.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Road__Avenue__street.usdz; sourceTree = "<group>"; };
+		8C660C182B91664400DBBDFF /* street.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = street.usdz; sourceTree = "<group>"; };
 		8C660C1A2B91A02000DBBDFF /* Quran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quran.swift; sourceTree = "<group>"; };
 		8C660C1C2B91A15C00DBBDFF /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8C6957EB2B9563980034A3A0 /* SurahView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurahView.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 			children = (
 				8C660C1C2B91A15C00DBBDFF /* MyPlayground.playground */,
 				8C660C1A2B91A02000DBBDFF /* Quran.swift */,
-				8C660C182B91664400DBBDFF /* Road__Avenue__street.usdz */,
+				8C660C182B91664400DBBDFF /* street.usdz */,
 				8C54D5912B90D6C800961096 /* DisplayText.swift */,
 				8C54D5922B90D6C800961096 /* FetchQuranVerse.swift */,
 				8C54D57A2B900A8700961096 /* SpatialQuran */,
@@ -160,7 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C54D5872B900A8D00961096 /* Preview Assets.xcassets in Resources */,
-				8C660C192B91664400DBBDFF /* Road__Avenue__street.usdz in Resources */,
+				8C660C192B91664400DBBDFF /* street.usdz in Resources */,
 				8C54D5842B900A8D00961096 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
