@@ -21,6 +21,11 @@ struct SurahView: View {
                             .font(.system(size:30))
                         if ayah.englishTranslation.contains("way") {
                             Button("See Object") {
+                                RealityView { content in
+                                    //                                    if let street = loadEntity() {
+                                    //                                        content.add(street)
+                                    //                                    }}
+                                }
 //                                Model3D(named: "street")
 //                                    .padding(.bottom,50)
 //                                let anchor = AnchorEntity(.plane(.horizontal, classification: .any, minimumBounds: .one))
@@ -33,6 +38,7 @@ struct SurahView: View {
             }
         }
     }
+    
 }
 
 #Preview {

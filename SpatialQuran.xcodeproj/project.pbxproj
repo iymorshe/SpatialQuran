@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C54D57E2B900A8700961096 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 8C54D57D2B900A8700961096 /* RealityKitContent */; };
 		8C54D5802B900A8700961096 /* SpatialQuranApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54D57F2B900A8700961096 /* SpatialQuranApp.swift */; };
 		8C54D5822B900A8700961096 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54D5812B900A8700961096 /* ContentView.swift */; };
 		8C54D5842B900A8D00961096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C54D5832B900A8D00961096 /* Assets.xcassets */; };
@@ -17,11 +16,14 @@
 		8C660C192B91664400DBBDFF /* street.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8C660C182B91664400DBBDFF /* street.usdz */; };
 		8C660C1B2B91A02000DBBDFF /* Quran.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C660C1A2B91A02000DBBDFF /* Quran.swift */; };
 		8C6957EC2B9563980034A3A0 /* SurahView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6957EB2B9563980034A3A0 /* SurahView.swift */; };
+		8C9139B62BB4ECA300C05976 /* kaba.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8C9139B52BB4ECA300C05976 /* kaba.usdz */; };
+		8CC429052B992D5B00B57CBB /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 8CC429042B992D5B00B57CBB /* RealityKitContent */; };
+		8CC429072B992DD100B57CBB /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC429062B992DD100B57CBB /* ImageView.swift */; };
+		8CED18042B967FFE00DB88CF /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CED18032B967FFE00DB88CF /* ImmersiveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C54D5782B900A8700961096 /* SpatialQuran.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialQuran.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C54D57C2B900A8700961096 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		8C54D57F2B900A8700961096 /* SpatialQuranApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialQuranApp.swift; sourceTree = "<group>"; };
 		8C54D5812B900A8700961096 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8C54D5832B900A8D00961096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +35,9 @@
 		8C660C1A2B91A02000DBBDFF /* Quran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quran.swift; sourceTree = "<group>"; };
 		8C660C1C2B91A15C00DBBDFF /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8C6957EB2B9563980034A3A0 /* SurahView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurahView.swift; sourceTree = "<group>"; };
+		8C9139B52BB4ECA300C05976 /* kaba.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = kaba.usdz; sourceTree = "<group>"; };
+		8CC429062B992DD100B57CBB /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		8CED18032B967FFE00DB88CF /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C54D57E2B900A8700961096 /* RealityKitContent in Frameworks */,
+				8CC429052B992D5B00B57CBB /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,13 +55,13 @@
 		8C54D56F2B900A8700961096 = {
 			isa = PBXGroup;
 			children = (
+				8CC429062B992DD100B57CBB /* ImageView.swift */,
 				8C660C1C2B91A15C00DBBDFF /* MyPlayground.playground */,
 				8C660C1A2B91A02000DBBDFF /* Quran.swift */,
 				8C660C182B91664400DBBDFF /* street.usdz */,
 				8C54D5912B90D6C800961096 /* DisplayText.swift */,
 				8C54D5922B90D6C800961096 /* FetchQuranVerse.swift */,
 				8C54D57A2B900A8700961096 /* SpatialQuran */,
-				8C54D57B2B900A8700961096 /* Packages */,
 				8C54D5792B900A8700961096 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,22 +77,16 @@
 		8C54D57A2B900A8700961096 /* SpatialQuran */ = {
 			isa = PBXGroup;
 			children = (
+				8C9139B52BB4ECA300C05976 /* kaba.usdz */,
 				8C54D57F2B900A8700961096 /* SpatialQuranApp.swift */,
 				8C54D5812B900A8700961096 /* ContentView.swift */,
 				8C54D5832B900A8D00961096 /* Assets.xcassets */,
 				8C54D5882B900A8D00961096 /* Info.plist */,
 				8C54D5852B900A8D00961096 /* Preview Content */,
 				8C6957EB2B9563980034A3A0 /* SurahView.swift */,
+				8CED18032B967FFE00DB88CF /* ImmersiveView.swift */,
 			);
 			path = SpatialQuran;
-			sourceTree = "<group>";
-		};
-		8C54D57B2B900A8700961096 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				8C54D57C2B900A8700961096 /* RealityKitContent */,
-			);
-			path = Packages;
 			sourceTree = "<group>";
 		};
 		8C54D5852B900A8D00961096 /* Preview Content */ = {
@@ -115,7 +114,7 @@
 			);
 			name = SpatialQuran;
 			packageProductDependencies = (
-				8C54D57D2B900A8700961096 /* RealityKitContent */,
+				8CC429042B992D5B00B57CBB /* RealityKitContent */,
 			);
 			productName = SpatialQuran;
 			productReference = 8C54D5782B900A8700961096 /* SpatialQuran.app */;
@@ -145,6 +144,9 @@
 				Base,
 			);
 			mainGroup = 8C54D56F2B900A8700961096;
+			packageReferences = (
+				8CC429032B992D5A00B57CBB /* XCLocalSwiftPackageReference "../../../Downloads/GenerativeDoodleArt_VisionOS-main/Packages/RealityKitContent" */,
+			);
 			productRefGroup = 8C54D5792B900A8700961096 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9139B62BB4ECA300C05976 /* kaba.usdz in Resources */,
 				8C54D5872B900A8D00961096 /* Preview Assets.xcassets in Resources */,
 				8C660C192B91664400DBBDFF /* street.usdz in Resources */,
 				8C54D5842B900A8D00961096 /* Assets.xcassets in Resources */,
@@ -172,9 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC429072B992DD100B57CBB /* ImageView.swift in Sources */,
 				8C54D5822B900A8700961096 /* ContentView.swift in Sources */,
 				8C660C1B2B91A02000DBBDFF /* Quran.swift in Sources */,
 				8C54D5802B900A8700961096 /* SpatialQuranApp.swift in Sources */,
+				8CED18042B967FFE00DB88CF /* ImmersiveView.swift in Sources */,
 				8C54D5942B90D6C800961096 /* FetchQuranVerse.swift in Sources */,
 				8C6957EC2B9563980034A3A0 /* SurahView.swift in Sources */,
 				8C54D5932B90D6C800961096 /* DisplayText.swift in Sources */,
@@ -378,8 +383,15 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		8CC429032B992D5A00B57CBB /* XCLocalSwiftPackageReference "../../../Downloads/GenerativeDoodleArt_VisionOS-main/Packages/RealityKitContent" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../../Downloads/GenerativeDoodleArt_VisionOS-main/Packages/RealityKitContent";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		8C54D57D2B900A8700961096 /* RealityKitContent */ = {
+		8CC429042B992D5B00B57CBB /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
 		};

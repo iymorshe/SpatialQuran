@@ -23,7 +23,6 @@ struct ContentView: View {
                             await loadVersesForSurah(surahNumber: surahNumber)
                         }
                     }
-                    
                 } label: {
                     Image(systemName: "arrow.left")
                         .resizable()
