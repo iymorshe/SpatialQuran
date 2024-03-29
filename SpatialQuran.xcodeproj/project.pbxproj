@@ -18,7 +18,6 @@
 		8C6957EC2B9563980034A3A0 /* SurahView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6957EB2B9563980034A3A0 /* SurahView.swift */; };
 		8C9139B62BB4ECA300C05976 /* kaba.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8C9139B52BB4ECA300C05976 /* kaba.usdz */; };
 		8C9139B82BB7799800C05976 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9139B72BB7799800C05976 /* Models.swift */; };
-		8CC429052B992D5B00B57CBB /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 8CC429042B992D5B00B57CBB /* RealityKitContent */; };
 		8CC429072B992DD100B57CBB /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC429062B992DD100B57CBB /* ImageView.swift */; };
 		8CED18042B967FFE00DB88CF /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CED18032B967FFE00DB88CF /* ImmersiveView.swift */; };
 /* End PBXBuildFile section */
@@ -47,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CC429052B992D5B00B57CBB /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +115,6 @@
 			);
 			name = SpatialQuran;
 			packageProductDependencies = (
-				8CC429042B992D5B00B57CBB /* RealityKitContent */,
 			);
 			productName = SpatialQuran;
 			productReference = 8C54D5782B900A8700961096 /* SpatialQuran.app */;
@@ -393,13 +390,6 @@
 			relativePath = "../../../Downloads/GenerativeDoodleArt_VisionOS-main/Packages/RealityKitContent";
 		};
 /* End XCLocalSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8CC429042B992D5B00B57CBB /* RealityKitContent */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RealityKitContent;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8C54D5702B900A8700961096 /* Project object */;
 }
