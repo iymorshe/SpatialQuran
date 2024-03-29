@@ -18,28 +18,41 @@ struct SurahView: View {
             ScrollView {
                 VStack(alignment: .leading){
                     ForEach(surah.ayahs, id: \.self) { ayah in
-                            Text("\(ayah.ayahNumber). \(ayah.englishTranslation)")
-                                .font(.system(size:30))
+                        Text("\(ayah.ayahNumber). \(ayah.englishTranslation)")
+                            .font(.system(size:30))
                         if objectPositions.contains(where: {$0.key == ayah.identification()}) {
-                                Button("See Object") {
-                                    pressed.toggle()
+                            VStack{
+                                HStack{
+                                    Spacer()
+                                    
+                                    Button("See Object") {
+                                        pressed.toggle()
+                                    }
+                                    
+                                    .padding()
+                                    .glassBackgroundEffect()
+                                    Spacer()
+                                }
+                                if pressed {
+                                    Model3D(named: "street") {
+                                        model in
+                                        model
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .scaleEffect(0.7)
+                                    } placeholder: {
+                                        ProgressView()
+                                    }
                                 }
                             }
                         }
+                    }
                 }
-                Model3D(named: "kaba") {
-                    path in
-                    path
-                        .resizable()
-                        .scaleEffect(CGSize(width: 0.05, height: 0.05))
-                } placeholder: {
-                    Text("Loading")
                 }
             }
             
         }
     }
-}
 
 #Preview {
     ContentView()

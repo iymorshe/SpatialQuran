@@ -14,12 +14,10 @@ struct ImageView: View {
 //        let groundAnchor = AnchorEntity(
 //    }
     var body: some View {
-        RealityView { content in
-            do {
-                let immersiveEntity = try await Entity(named:"Immersive", in: realityKitContentBundle)
-                content.add(immersiveEntity)
-            } catch {
-                print("\(error)")
+        
+        RealityView{ content in
+            if let s = try? await Entity(named: "kaba"){
+                content.add(s)
             }
         }
             
