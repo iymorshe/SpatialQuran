@@ -15,6 +15,10 @@ struct Ayah: Decodable, Hashable {
         hasher.combine(surahNumber)
         hasher.combine(ayahNumber)
     }
+    
+    func identification() -> String{
+        return "\(surahNumber).\(ayahNumber)"
+    }
     static func == (lhs: Ayah, rhs: Ayah) -> Bool {
         return lhs.surahNumber == rhs.surahNumber && lhs.ayahNumber == rhs.ayahNumber
     }
