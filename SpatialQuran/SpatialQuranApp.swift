@@ -12,9 +12,8 @@ struct SpatialQuranApp: App {
     @StateObject var quran = Quran.shared
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-//                .environmentObject(quran)
-            ImmersiveView()
+            ContentView()
+          .environmentObject(quran)
         }
     }
 }
