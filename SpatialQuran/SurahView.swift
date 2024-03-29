@@ -20,25 +20,14 @@ struct SurahView: View {
                         Text("\(ayah.ayahNumber). \(ayah.englishTranslation)")
                             .font(.system(size:30))
                         if ayah.englishTranslation.contains("way") {
-                            Button("See Object") {
-                                RealityView { content in
-                                    //                                    if let street = loadEntity() {
-                                    //                                        content.add(street)
-                                    //                                    }}
-                                }
-//                                Model3D(named: "street")
-//                                    .padding(.bottom,50)
-//                                let anchor = AnchorEntity(.plane(.horizontal, classification: .any, minimumBounds: .one))
-//                                let entity = Model3D(named: "street")
-                            }
+                            Button("See Object") {                        }
+                            Spacer()
                         }
-                        Spacer()
                     }
                 }
             }
         }
     }
-    
 }
 
 #Preview {

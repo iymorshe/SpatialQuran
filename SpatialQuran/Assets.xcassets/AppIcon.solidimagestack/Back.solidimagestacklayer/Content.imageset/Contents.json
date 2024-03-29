@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "spatialBack.jpg",
       "idiom" : "vision",
       "scale" : "2x"
     }

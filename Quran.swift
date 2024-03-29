@@ -11,12 +11,10 @@ struct Ayah: Decodable, Hashable {
     let surahNumber: Int
     let ayahNumber: Int
     let englishTranslation: String
-    
-    var hashValue: Int {
-            let id = "\(surahNumber).\(ayahNumber)"
-            return id.hashValue
-        }
-
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(surahNumber)
+        hasher.combine(ayahNumber)
+    }
     static func == (lhs: Ayah, rhs: Ayah) -> Bool {
         return lhs.surahNumber == rhs.surahNumber && lhs.ayahNumber == rhs.ayahNumber
     }
