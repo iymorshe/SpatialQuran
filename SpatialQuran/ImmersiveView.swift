@@ -7,22 +7,19 @@
 
 import SwiftUI
 import RealityKit
-import RealityKitContent
-struct ImmersiveView: View {
+struct RealView: View {
+    var ayah: Ayah
     var body: some View {
         VStack{
-            Text("Salama")
-            Model3D(named: "kaba"){model in
+            Model3D(named: "\(objectPositions[ayah.identification()] ?? "street")"){model in
                 model
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .scaleEffect()
             } placeholder: {
-                Text("Habibi")
+                ProgressView()
             }
         }
     }
 }
 
-#Preview {
-    ImmersiveView()
-}

@@ -7,7 +7,6 @@
 
 import SwiftUI
 import RealityKit
-import RealityKitContent
 
 struct ImageView: View {
 //    @State var itemEntity: Entity = {
