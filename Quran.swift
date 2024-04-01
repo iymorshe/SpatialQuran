@@ -11,6 +11,7 @@ struct Ayah: Decodable, Hashable {
     let surahNumber: Int
     let ayahNumber: Int
     let englishTranslation: String
+    @State var isFavorite: Bool = false
     func hash(into hasher: inout Hasher) {
         hasher.combine(surahNumber)
         hasher.combine(ayahNumber)
@@ -63,6 +64,19 @@ class Quran: ObservableObject {
         }
     }
     @Published var surahs: [Surah] = []
+    @Published var favoriteAyahs: Set<Ayah> = []
+    
+    func toggleFavorite(ayah: Ayah) {
+            if favoriteAyahs.contains(ayah) {
+                favoriteAyahs.remove(ayah)
+            } else {
+                favoriteAyahs.insert(ayah)
+            }
+        }
+        
+        func isFavorite(ayah: Ayah) -> Bool {
+            return favoriteAyahs.contains(ayah)
+        }
 }
 
 func fetchVerse(surahNumber: Int, verseNumber: Int) async throws -> Ayah {
