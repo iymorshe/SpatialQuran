@@ -13,47 +13,47 @@ struct ContentView: View {
     @State var quranText: [Ayah] = []
     @ObservedObject var quran: Quran = Quran.shared
     var body: some View {
-            /*NavigationSplitView{
-             Text("habibi")
-             }
-             
-             detail: {*/ VStack {
-                 HStack {
-                     Button {
-                         if surahNumber > 1 {
-                             surahNumber -= 1
-                             Task {
-                                 await loadVersesForSurah(surahNumber: surahNumber)
-                             }
-                         }
-                     } label: {
-                         Image(systemName: "arrow.left")
-                             .resizable()
-                             .frame(width: 30, height: 30)
-                     }
-                     Text(englishSurahNames[surahNumber])
-                         .font(.title)
-                         .fontWeight(.bold)
-                     Button {
-                         surahNumber += 1
-                         Task {
-                             await loadVersesForSurah(surahNumber: surahNumber)
-                         }
-                     } label: {
-                         Image(systemName: "arrow.right")
-                             .resizable()
-                             .frame(width: 30, height: 30)
-                     }
-                 }
-                 SurahView(surah: quran.surahs[surahNumber])
-                 
-                     .onAppear {
-                         Task {
-                             await loadVersesForSurah(surahNumber: surahNumber)
-                         }
-                     }
-             }
+        NavigationSplitView{
+            Text("habibi")
         }
+    detail: { VStack {
+        HStack {
+            Button {
+                if surahNumber > 1 {
+                    surahNumber -= 1
+                    Task {
+                        await loadVersesForSurah(surahNumber: surahNumber)
+                    }
+                }
+            } label: {
+                Image(systemName: "arrow.left")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+            }
+            Text(englishSurahNames[surahNumber])
+                .font(.title)
+                .fontWeight(.bold)
+            Button {
+                surahNumber += 1
+                Task {
+                    await loadVersesForSurah(surahNumber: surahNumber)
+                }
+            } label: {
+                Image(systemName: "arrow.right")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+            }
+        }
+        SurahView(surah: quran.surahs[surahNumber])
+        
+            .onAppear {
+                Task {
+                    await loadVersesForSurah(surahNumber: surahNumber)
+                }
+            }
+    }
+    }
+    }
         
         private func loadVersesForSurah(surahNumber: Int) async {
             guard surahNumber - 1 < versesPerChapter.count else { return }
@@ -77,3 +77,4 @@ struct ContentView: View {
             }
         }
     }
+

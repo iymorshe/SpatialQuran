@@ -16,7 +16,7 @@ struct AyahView: View {
             Text("\(ayah.ayahNumber). \(ayah.englishTranslation)")
                 .font(.system(size:30))
             Spacer()
-            Button(action: {
+            /*Button(action: {
                 withAnimation {
                     quran.toggleFavorite(ayah: ayah)
                 }
@@ -24,7 +24,7 @@ struct AyahView: View {
                 Image(systemName: quran.isFavorite(ayah: ayah) ? "star.fill" : "star")
                     .foregroundColor(quran.isFavorite(ayah: ayah) ? .yellow : .gray)
                 
-            }
+            } */
         }
             if objectPositions.contains(where: {$0.key == ayah.identification()}) {
                 VStack{
