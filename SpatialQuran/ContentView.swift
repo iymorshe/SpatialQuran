@@ -14,7 +14,7 @@ struct ContentView: View {
     @ObservedObject var quran: Quran = Quran.shared
     var body: some View {
         NavigationSplitView{
-            Text("habibi")
+            Pick(selectedSurah: $surahNumber)
         }
     detail: { VStack {
         HStack {
