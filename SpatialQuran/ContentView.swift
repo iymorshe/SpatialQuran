@@ -13,8 +13,16 @@ struct ContentView: View {
     @State var quranText: [Ayah] = []
     @ObservedObject var quran: Quran = Quran.shared
     var body: some View {
-        NavigationSplitView{
-            VStack{
+        VStack {
+        SurahView(surah: quran.surahs[surahNumber])
+                .padding(20
+                )
+            .onAppear {
+                    Task {
+                        await Quran.shared.loadVersesForSurah(surahNumber: surahNumber)
+                    }
+            }
+            .ornament(visibility: .visible, attachmentAnchor: .scene(.bottom), contentAlignment: .center) {
                 HStack {
                     Button {
                         if surahNumber > 1 {
@@ -34,21 +42,11 @@ struct ContentView: View {
                             .frame(width: 30, height: 30)
                     }
                 }
+                .padding(.top, 80)
             }
-            Spacer()
-        }
-    detail: { VStack {
-        SurahView(surah: quran.surahs[surahNumber])
-        
-            .onAppear {
-                    Task {
-                        await Quran.shared.loadVersesForSurah(surahNumber: surahNumber)
-                    }
-            }
+                }
+            
     }
     }
-    }
-        
 
-    }
 
