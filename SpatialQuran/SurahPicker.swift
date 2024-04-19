@@ -2,6 +2,7 @@ import SwiftUI
 
 struct Pick: View {
     
+    @ObservedObject var quran: Quran = Quran.shared
     @Binding var selectedSurah: Int
     var body: some View {
         Picker("Hamood", selection: $selectedSurah) {
@@ -11,6 +12,10 @@ struct Pick: View {
         }
         .onChange(of: selectedSurah) { newValue in
             selectedSurah = newValue // Update the binding variable
+            
+            Task {
+                await quran.loadVersesForSurah(surahNumber: selectedSurah)
+            }
         }
     }
 }

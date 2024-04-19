@@ -76,7 +76,28 @@ class Quran: ObservableObject {
         
         func isFavorite(ayah: Ayah) -> Bool {
             return favoriteAyahs.contains(ayah)
+        } 
+    func loadVersesForSurah(surahNumber: Int) async {
+        guard surahNumber - 1 < versesPerChapter.count else { return }
+        let numberOfVerses = versesPerChapter[surahNumber]
+        if (Quran.shared.surahs[surahNumber].ayahs.count != 0) {
+            return
         }
+        for verseNumber in 1...numberOfVerses {
+            do {
+                let ayah = try await fetchVerse(surahNumber: surahNumber, verseNumber: verseNumber)
+                DispatchQueue.main.async {
+                    withAnimation{
+                    Quran.shared.surahs[surahNumber].ayahs.append(ayah)
+                        Quran.shared.surahs[surahNumber].sortAyahs()
+                    }
+                }
+                
+            } catch {
+                print("Error fetching verse: \(error)")
+            }
+        }
+    }
 }
 
 func fetchVerse(surahNumber: Int, verseNumber: Int) async throws -> Ayah {

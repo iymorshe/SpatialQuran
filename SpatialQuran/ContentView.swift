@@ -22,7 +22,7 @@ struct ContentView: View {
                 if surahNumber > 1 {
                     surahNumber -= 1
                     Task {
-                        await loadVersesForSurah(surahNumber: surahNumber)
+                        await Quran.shared.loadVersesForSurah(surahNumber: surahNumber)
                     }
                 }
             } label: {
@@ -36,7 +36,7 @@ struct ContentView: View {
             Button {
                 surahNumber += 1
                 Task {
-                    await loadVersesForSurah(surahNumber: surahNumber)
+                    await Quran.shared.loadVersesForSurah(surahNumber: surahNumber)
                 }
             } label: {
                 Image(systemName: "arrow.right")
@@ -47,34 +47,14 @@ struct ContentView: View {
         SurahView(surah: quran.surahs[surahNumber])
         
             .onAppear {
-                Task {
-                    await loadVersesForSurah(surahNumber: surahNumber)
-                }
+                    Task {
+                        await Quran.shared.loadVersesForSurah(surahNumber: surahNumber)
+                    }
             }
     }
     }
     }
         
-        private func loadVersesForSurah(surahNumber: Int) async {
-            guard surahNumber - 1 < versesPerChapter.count else { return }
-            let numberOfVerses = versesPerChapter[surahNumber]
-            quranText = []
-            if (Quran.shared.surahs[surahNumber].ayahs.count != 0) {
-                return
-            }
-            for verseNumber in 1...numberOfVerses {
-                do {
-                    let ayah = try await fetchVerse(surahNumber: surahNumber, verseNumber: verseNumber)
-                    DispatchQueue.main.async {
-                        //quranText.append(ayah)
-                        withAnimation{ Quran.shared.surahs[surahNumber].ayahs.append(ayah)
-                        }
-                    }
-                    Quran.shared.surahs[surahNumber].sortAyahs()
-                } catch {
-                    print("Error fetching verse: \(error)")
-                }
-            }
-        }
+
     }
 
