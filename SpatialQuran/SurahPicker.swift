@@ -10,8 +10,8 @@ struct Pick: View {
                 Text("\(index). \(englishSurahNames[index])")
             }
         }
-        .onChange(of: selectedSurah) { newValue in
-            selectedSurah = newValue // Update the binding variable
+        .onChange(of: selectedSurah) {
+            selectedSurah = selectedSurah // Update the binding variable
             
             Task {
                 await quran.loadVersesForSurah(surahNumber: selectedSurah)

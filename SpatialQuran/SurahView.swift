@@ -15,12 +15,13 @@ struct SurahView: View {
     var body: some View {
         VStack {
             ScrollView {
-                VStack(alignment: .leading){
+                LazyVStack(alignment: .leading){
                     ForEach(surah.ayahs, id: \.self) { ayah in
                         AyahView(ayah:ayah)
                     }
                     
                 }
+                .scrollIndicators(.hidden)
             }
                 }
             }
