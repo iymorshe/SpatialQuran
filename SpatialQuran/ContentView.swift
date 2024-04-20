@@ -22,6 +22,16 @@ struct ContentView: View {
                         await Quran.shared.loadVersesForSurah(surahNumber: surahNumber)
                     }
             }
+            .ornament(visibility: .visible, attachmentAnchor: .scene(.leading), contentAlignment: .center) {
+                VStack{
+                    Button {
+                        print("habibi")
+                    } label: {
+                        Image(systemName: "gear")
+                    }
+                }
+                .padding(.horizontal, 999)
+            }
             .ornament(visibility: .visible, attachmentAnchor: .scene(.bottom), contentAlignment: .center) {
                 HStack {
                     Button {
